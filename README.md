@@ -2,6 +2,8 @@
 
 反面教師で学ぶ参考書の書き方
 
+[GitHub Pages](https://ezoeryou.github.io/how-not-to-write-textbook/)
+
 # 発表者
 
 + 江添亮
