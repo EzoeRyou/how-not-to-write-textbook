@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <title></title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css">
+  <style type="text/css">code{white-space: pre;}</style>
+  <style type="text/css">
+div.sourceCode { overflow-x: auto; }
+table.sourceCode, tr.sourceCode, td.lineNumbers, td.sourceCode {
+  margin: 0; padding: 0; vertical-align: baseline; border: none; }
+table.sourceCode { width: 100%; line-height: 100%; }
+td.lineNumbers { text-align: right; padding-right: 4px; padding-left: 4px; color: #aaaaaa; border-right: 1px solid #aaaaaa; }
+td.sourceCode { padding-left: 5px; }
+code > span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code > span.dt { color: #902000; } /* DataType */
+code > span.dv { color: #40a070; } /* DecVal */
+code > span.bn { color: #40a070; } /* BaseN */
+code > span.fl { color: #40a070; } /* Float */
+code > span.ch { color: #4070a0; } /* Char */
+code > span.st { color: #4070a0; } /* String */
+code > span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code > span.ot { color: #007020; } /* Other */
+code > span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code > span.fu { color: #06287e; } /* Function */
+code > span.er { color: #ff0000; font-weight: bold; } /* Error */
+code > span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+code > span.cn { color: #880000; } /* Constant */
+code > span.sc { color: #4070a0; } /* SpecialChar */
+code > span.vs { color: #4070a0; } /* VerbatimString */
+code > span.ss { color: #bb6688; } /* SpecialString */
+code > span.im { } /* Import */
+code > span.va { color: #19177c; } /* Variable */
+code > span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code > span.op { color: #666666; } /* Operator */
+code > span.bu { } /* BuiltIn */
+code > span.ex { } /* Extension */
+code > span.pp { color: #bc7a00; } /* Preprocessor */
+code > span.at { color: #7d9029; } /* Attribute */
+code > span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code > span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code > span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+  </style>
+  <link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'reveal.js/css/print/pdf.css' : 'reveal.js/css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+
+<section id="how-not-to-write-textbook" class="slide level1">
+<h1>How not to write textbook</h1>
+<p>反面教師で学ぶ参考書の書き方</p>
+</section>
+<section id="発表者" class="slide level1">
+<h1>発表者</h1>
+<ul>
+<li>江添亮</li>
+<li>ドワンゴ</li>
+<li>C++標準化委員</li>
+</ul>
+</section>
+<section id="split-the-source" class="slide level1">
+<h1>Split the source</h1>
+<p>ソースファイルは分割しろ</p>
+</section>
+<section id="giant-single-source-file" class="slide level1">
+<h1>Giant single source file</h1>
+<ul>
+<li>編集しにくい</li>
+<li>GitHubでPRが来ない</li>
+</ul>
+</section>
+<section id="write-the-test" class="slide level1">
+<h1>Write the test</h1>
+<p>テストを書け</p>
+</section>
+<section id="spot-the-bug" class="slide level1">
+<h1>Spot the bug?</h1>
+<div class="sourceCode"><pre class="sourceCode cpp"><code class="sourceCode cpp"><span class="bu">std::</span>vecotr&lt;<span class="dt">int</span>&gt; v </code></pre></div>
+<ul>
+<li class="fragment">typo: s/vecotr/vector/</li>
+<li class="fragment">semilocon: ;</li>
+</ul>
+</section>
+<section id="dont-use-the-force" class="slide level1">
+<h1>Don't use the Force</h1>
+<ol type="1">
+<li>原稿から</li>
+<li>サンプルコードをgrep</li>
+<li>コンパイル</li>
+<li>エラーの有無を確認</li>
+</ol>
+</section>
+<section id="be-expert" class="slide level1">
+<h1>Be expert</h1>
+<p>技術更新を怠るな</p>
+</section>
+<section id="some-people-dont-age-well" class="slide level1">
+<h1>Some people don't age well</h1>
+<ul>
+<li class="fragment">1文字は1バイト</li>
+<li class="fragment">C++のlocaleで国際化対応できる</li>
+<li class="fragment">C++の正規表現ライブラリは国際化対応</li>
+<li class="fragment">最新のC++規格知識の欠如</li>
+</ul>
+</section>
+<section id="practice" class="slide level1">
+<h1>Practice</h1>
+<p>反省点を踏まえて</p>
+<p>C++17の参考書を書いてみよう</p>
+</section>
+<section id="what-works" class="slide level1">
+<h1>What works</h1>
+<ul>
+<li>markdownでファイル分割</li>
+<li>pandocでフォーマット変換</li>
+<li>Makeでビルド</li>
+<li>gitで管理</li>
+<li>GitHubで共同編集</li>
+</ul>
+</section>
+<section id="what-doesnt-work" class="slide level1">
+<h1>What doesn't work</h1>
+<ul>
+<li>サンプルコードのテスト</li>
+<li>執筆当時、C++17規格準拠のコンパイラーの欠如</li>
+<li>日本語文章のテスト</li>
+<li>textlintを使ったが偽陽性が多い</li>
+</ul>
+</section>
+<section id="documentation" class="slide level1">
+<h1>Documentation</h1>
+<figure>
+<img src="https://imgs.xkcd.com/comics/manuals.png" alt="xkcd 1343" /><figcaption>xkcd 1343</figcaption>
+</figure>
+</section>
+<section id="solve-problems" class="slide level1">
+<h1>Solve Problems</h1>
+<ul>
+<li>マニュアルを必要としないツール</li>
+<li>マニュアルを必要とするツール</li>
+</ul>
+</section>
+<section id="create-problems" class="slide level1">
+<h1>Create Problems</h1>
+<ul>
+<li>マニュアルを必要とするが欠如したツール</li>
+<li>マニュアルが「本マニュアルの読み方」から始まるツール</li>
+</ul>
+</section>
+<section id="man-sudoers" class="slide level1">
+<h1>man sudoers</h1>
+<pre><code>心配するな
+
+このドキュメントはアノテーション付きだ</code></pre>
+</section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        // Transition style
+        transition: 'fade', // none/fade/slide/convex/concave/zoom
+
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+              { src: 'reveal.js/plugin/notes/notes.js', async: true }
+        ]
+      });
+    </script>
+    </body>
+</html>
